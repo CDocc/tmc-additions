@@ -238,4 +238,4 @@ Each feature is designed to be completely independent:
 
 ## Support
 
-For issues or questions, contact the development team.
+For issues or questions, contact the me in my discord.
