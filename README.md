@@ -171,6 +171,8 @@ Config.Movement = {
 |---------|-------------|------------|
 | `/selectsit [id]` | Place and sit with a custom animation | All Players |
 | `/clearstuckprops` | Clear props stuck to your character | All Players |
+| `/copycsn` | Copy Citizen ID (CSN) to clipboard, handy when asked for in tickets etc | All Players |
+| `/getvehiclehash` | Copy the hash of vehicle to your clipboard, hash is what is stored in the database for the players vehicles | All Players |
 | `/afkcheck` | View all AFK players and their idle times | Admin |
 
 ## Exports
