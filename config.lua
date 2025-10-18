@@ -30,7 +30,7 @@ Config.BarrierRemovals = { -- Barrier Removals
 
 Config.SelectSit = { -- Select Sit System
     Enabled = true, -- Enable/disable the /selectsit command
-    Anims = { -- animations for /selectsit command
+    Anims = { -- Animations for /selectsit command
         {dict = "anim@amb@business@bgen@bgen_no_work@", anim = "sit_phone_phoneputdown_idle_nowork"},
         {dict = "timetable@jimmy@mics3_ig_15@", anim = "mics3_15_base_jimmy"},
     }
