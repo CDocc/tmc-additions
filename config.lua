@@ -1,7 +1,6 @@
 Config = Config or {}
 
--- Pause Menu Customization
-Config.PauseMenu = {
+Config.PauseMenu = { -- Pause Menu Customization
     Enabled = true, -- Enable/disable pause menu customization
     Title = "Your Server Name",
     MapCategory = "GPS",
@@ -15,8 +14,7 @@ Config.PauseMenu = {
     FiveMKeysConfigCategory = "FiveM Keybinds",
 }
 
--- Barrier Removals
-Config.BarrierRemovals = {
+Config.BarrierRemovals = { -- Barrier Removals
     Enabled = true, -- Enable/disable barrier removals
     Barriers = {
         -- remove legion barriers
@@ -30,8 +28,7 @@ Config.BarrierRemovals = {
     },
 }
 
--- Select Sit System
-Config.SelectSit = {
+Config.SelectSit = { -- Select Sit System
     Enabled = true, -- Enable/disable the /selectsit command
     Anims = { -- animations for /selectsit command
         {dict = "anim@amb@business@bgen@bgen_no_work@", anim = "sit_phone_phoneputdown_idle_nowork"},
@@ -39,26 +36,23 @@ Config.SelectSit = {
     }
 }
 
--- Clear Stuck Props System
-Config.ClearProps = {
+Config.ClearProps = { -- Clear Stuck Props System
     Enabled = true, -- Enable/disable the /clearstuckprops command
     Cooldown = 5000, -- Cooldown in milliseconds (5000 = 5 seconds)
 }
 
--- AFK System
-Config.AFK = {
+Config.AFK = { -- AFK System
     Enabled = true, -- Enable/disable the AFK system
     MaxIdleTime = 600, -- Time in seconds before a player is kicked (600 = 10 minutes)
     CheckInterval = 30, -- How often to check for AFK players in seconds (30 = 30 seconds)
     WarningTime = 540, -- Time in seconds when to send a warning before kick (540 = 9 minutes)
     WarningMessage = "You will be kicked for being AFK in %s seconds!", -- Warning message (%s will be replaced with remaining time)
     KickMessage = "You have been kicked for being AFK.", -- Kick message
-    ExemptPermission = "admin.afk.exempt", -- Permission to exempt from AFK kick (set to nil to disable)
+    ExemptPermission = "admin", -- Permission to exempt from AFK kick (set to nil to disable)
     CountPauseMenu = true, -- Count time spent in pause menu as AFK
 }
 
--- Vehicle Settings
-Config.Vehicle = {
+Config.Vehicle = { -- Vehicle Settings
     Enabled = true, -- Enable/disable vehicle tweaks
     
     -- Engine Configuration
@@ -81,8 +75,7 @@ Config.Vehicle = {
     ConfigUpdateInterval = 5000, -- How often to reapply vehicle config flags in milliseconds (5000 = 5 seconds)
 }
 
--- Player/Ped Settings
-Config.Player = {
+Config.Player = { -- Player/Ped Settings
     Enabled = true, -- Enable/disable player tweaks
     
     -- Animation Configuration
@@ -96,8 +89,7 @@ Config.Player = {
     ConfigUpdateInterval = 5000, -- How often to reapply ped config flags in milliseconds (5000 = 5 seconds)
 }
 
--- World/Environment Settings
-Config.World = {
+Config.World = { -- World/Environment Settings
     Enabled = true, -- Enable/disable world tweaks
     
     -- Audio Configuration
@@ -109,8 +101,7 @@ Config.World = {
     },
 }
 
--- Movement/Parkour System
-Config.Movement = {
+Config.Movement = { -- Movement/Parkour System
     Enabled = true, -- Enable/disable movement system
     
     -- Jump Settings
@@ -141,7 +132,7 @@ Config.Movement = {
     DisableAFKCam = true, -- Disable AFK camera
 }
 
-Config.StealthKills = {
+Config.StealthKills = { -- Stealth Kill System
     Enabled = true, -- Enable/disable stealth kill system
     Hashes = {
         "ACT_stealth_kill_a",
