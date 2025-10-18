@@ -98,3 +98,20 @@ if Config.Vehicle.EnableHeliSubmix then
         end
     end)
 end
+
+RegisterCommand("getvehiclehash", function()
+    local playerPed = PlayerPedId()
+    local vehicle = GetVehiclePedIsIn(playerPed, false)
+
+    if vehicle ~= 0 then
+        local vehicleHash = GetEntityModel(vehicle)
+        local vehicleName = GetDisplayNameFromVehicleModel(vehicleHash)
+        local spawnCode = GetLabelText(vehicleName)
+
+        TMC.Functions.Clipboard(tostring(vehicleHash), "Vehicle Hash of " .. vehicleName)
+    else
+        TMC.Functions.SimpleNotify("You are not in a vehicle.", "error")
+    end
+end)
+
+TriggerEvent('chat:addSuggestion', '/getvehiclehash', 'Get the hash of the vehicle you are sat in', {})

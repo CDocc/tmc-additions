@@ -9,3 +9,10 @@ AddEventHandler('core_game:deathState', function(dead)
 		exports['pma-voice']:resetProximityCheck()
 	end
 end)
+
+RegisterCommand("copycsn", function()
+    local csnString = LocalPlayer.state.citizenid
+    TMC.Functions.Clipboard(csnString, "Citizen ID (CSN)")
+end)
+
+TriggerEvent('chat:addSuggestion', '/copycsn', 'Copy your Citizen Id (CSN) to your clipboard.', {})
