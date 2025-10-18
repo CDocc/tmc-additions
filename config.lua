@@ -17,12 +17,12 @@ Config.PauseMenu = { -- Pause Menu Customization
 Config.BarrierRemovals = { -- Barrier Removals
     Enabled = true, -- Enable/disable barrier removals
     Barriers = {
-        -- remove legion barriers
+        -- Remove legion barriers
         {coords = vector3(206.5139, -803.2482, 29.9843), radius = 1.535, model = 307771752},
         {coords = vector3(230.9401, -816.4125, 29.3043), radius = 1.535, model = 307771752},
         {coords = vector3(230.9218, -816.153, 30.163), radius = 1.535, model = -1184516519},
         {coords = vector3(206.5139, -803.2482, 29.9843), radius = 1.535, model = -1184516519},
-        -- remove occupation ave barriers
+        -- Remove occupation ave barriers
         {coords = vector3(266.09, -349.35, 44.74), radius = 1.535, model = 242636620},
         {coords = vector3(285.28, -355.78, 45.13), radius = 1.535, model = 406416082},
     },
