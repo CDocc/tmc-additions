@@ -33,5 +33,4 @@ end)
 
 TriggerEvent('chat:addSuggestion', '/clearstuckprops', 'Clear any props or objects which are stuck to you.', {})
 
--- Export for other resources
 exports('ClearStuckProps', clearStuckProps)

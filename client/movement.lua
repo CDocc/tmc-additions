@@ -2,7 +2,6 @@ if not Config.Movement.Enabled then return end
 
 local TMC = exports.core:getCoreObject()
 
--- Jump Fatigue System
 if not Config.Movement.DisableJumpFatigue then
     local jumpCount = 0
     local lastJumpTime = 0
@@ -35,14 +34,12 @@ if not Config.Movement.DisableJumpFatigue then
             end
         end
     end)
-    
-    -- Export jump count
+
     exports('GetJumpCount', function()
         return jumpCount
     end)
 end
 
--- Unlimited Sprint
 if Config.Movement.SprintUnlimited then
     CreateThread(function()
         while true do
@@ -52,7 +49,6 @@ if Config.Movement.SprintUnlimited then
     end)
 end
 
--- Sprint Speed Modifier
 if Config.Movement.SprintSpeedMultiplier ~= 1.0 then
     CreateThread(function()
         while true do
@@ -63,7 +59,6 @@ if Config.Movement.SprintSpeedMultiplier ~= 1.0 then
     end)
 end
 
--- Prone/Crawl System
 if Config.Movement.ProneEnabled then
     local isProne = false
     
@@ -92,7 +87,7 @@ if Config.Movement.ProneEnabled then
     end, false)
     
     RegisterCommand('-prone', function()
-        -- Key release (not used for toggle)
+
     end, false)
     
     RegisterKeyMapping('+prone', 'Toggle Prone', 'keyboard', Config.Movement.ProneKey)
@@ -110,14 +105,12 @@ if Config.Movement.ProneEnabled then
             end
         end
     end)
-    
-    -- Export prone status
+
     exports('IsProne', function()
         return isProne
     end)
 end
 
--- Movement Speed Modifiers
 if Config.Movement.WalkSpeed ~= 1.0 or Config.Movement.RunSpeed ~= 1.0 then
     CreateThread(function()
         while true do
@@ -135,7 +128,6 @@ if Config.Movement.WalkSpeed ~= 1.0 or Config.Movement.RunSpeed ~= 1.0 then
     end)
 end
 
--- Climbing Speed Modifier
 if Config.Movement.ClimbingSpeedMultiplier ~= 1.0 then
     CreateThread(function()
         while true do
@@ -150,35 +142,30 @@ if Config.Movement.ClimbingSpeedMultiplier ~= 1.0 then
     end)
 end
 
--- Disable Vaulting
 if Config.Movement.DisableVaulting then
     CreateThread(function()
         while true do
             Wait(0)
-            DisableControlAction(0, 22, true) -- Disable space bar for vaulting
+            DisableControlAction(0, 22, true)
         end
     end)
 end
 
--- Disable Idle Camera
 if Config.Movement.DisableIdleCam then
     CreateThread(function()
         while true do
-            Wait(10000) -- Check every 10 seconds
+            Wait(10000)
             InvalidateIdleCam()
             InvalidateVehicleIdleCam()
         end
     end)
 end
 
--- Disable AFK Camera
 if Config.Movement.DisableAFKCam then
     CreateThread(function()
         while true do
             Wait(0)
-            DisableControlAction(0, 0, true) -- Disable cinematic cam
-            DisableControlAction(0, 1, true) -- Disable camera pan
-            DisableControlAction(0, 2, true) -- Disable camera tilt
+            DisableControlAction(0, 0, true) -- cinematic cam
         end
     end)
 end

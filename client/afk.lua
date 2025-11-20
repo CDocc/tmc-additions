@@ -8,12 +8,7 @@ CreateThread(function()
         Wait(Config.AFK.CheckInterval * 1000)
 
         local idleTime = GetTimeSinceLastInput() / 1000
-        
-        -- if pause menu is open and we're counting it as AFK
-        if Config.AFK.CountPauseMenu and IsPauseMenuActive() then
-            -- use the actual idle time (pause menu counts as AFK)
-        elseif IsPauseMenuActive() then
-            -- reset the idle time to 0 if pause menu is open and we're not counting it
+        if IsPauseMenuActive() and not Config.AFK.CountPauseMenu then
             idleTime = 0
         end
         

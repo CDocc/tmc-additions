@@ -2,6 +2,20 @@ if not Config.Player.Enabled then return end
 
 local isLoggedIn = false
 
+local function StartLoggedInThread()
+    CreateThread(function()
+        while isLoggedIn do
+            Wait(0)
+            
+            local ped = PlayerPedId()
+
+            if Config.Player.DisableHeadshots then
+                SetPedSuffersCriticalHits(ped, false)
+            end
+        end
+    end)
+end
+
 CreateThread(function()
     while true do
         Wait(Config.Player.ConfigUpdateInterval)
@@ -26,17 +40,3 @@ end)
 RegisterNetEvent('TMC:Client:OnPlayerUnload', function()
     isLoggedIn = false
 end)
-
-local function StartLoggedInThread()
-    CreateThread(function()
-        while isLoggedIn do
-            Wait(0)
-            
-            local ped = PlayerPedId()
-
-            if Config.Player.DisableHeadshots then
-                SetPedSuffersCriticalHits(ped, false)
-            end
-        end
-    end)
-end
