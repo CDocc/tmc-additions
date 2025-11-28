@@ -11,7 +11,6 @@ local function IsExempt(source)
 end
 
 TMC.Functions.RegisterServerEvent('cdocc-addons:server:UpdateAFKStatus', function(source, idleTime)
-    
     if not afkPlayers[source] then
         afkPlayers[source] = {
             idleTime = 0,
