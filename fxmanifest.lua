@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-author 'CDocc'
-description 'Additional bits and bobs for TMC Framework'
+author 'TMC Community'
+description 'Additional bits and bobs for TMC Framework created by TMC Community Developers'
 
 shared_scripts {
     'config.lua',
